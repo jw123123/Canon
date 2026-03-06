@@ -13,7 +13,7 @@
 }
 
 .main-section h2 {
-  font-size: 42px;
+  font-size: 40px;
     text-align: center;
     font-family: var(--secondary-font);
     color: var(--primary-color);
@@ -70,12 +70,6 @@
   color: #fff;
 }
 
-.recommend-container {
-  position: relative;
-  display: flex;
-  gap: 1em;
-  justify-content: center;
-}
 
 .recommend-wrap {}
 
@@ -84,73 +78,6 @@
   width: 100vw;
 }
 
-.recommend button {
-  color: #fff;
-}
-
-.recommend-list {
-  width: 100%;
-  overflow: hidden;
-}
-
-.recommend-item {
-  position: absolute;
-  top: 0;
-  left: 10px;
-  display: flex;
-  width: 250%;
-  height: 100%;
-}
-
-.item {
-  width: 100%;
-  padding: 0 10px;
-  height: 50%;
-}
-
-.item>a {
-  color: #fff;
-}
-
-.item>a>img {
-  height: 100%;
-}
-
-/* .item1 {background-image: url(../images/EOS_R1.png) ;} */
-.item2 {
-  background-image: url(../images/EOS_R50_V.png);
-}
-
-.item3 {
-  background-image: url(../images/PowerShot_G7_X_Mark_III.png);
-}
-
-.item4 {
-  background-image: url(../images/EOS_C50.png);
-}
-
-/* .recommend {
-  position: absolute;
-  left: 0;
-  top: 200%;
-  display: flex;
-  gap: 2em;
-  width: 100%;
-  overflow: hidden;
-}
-.recommend a {
-  text-align: center;
-}
-.recommend dt {
-  padding-bottom: 1em;
-}
-.re-img > img {
-  width: auto;
-  height: 150px;
-}
-.recommend dd {
-  color: #fff;
-} */
 
 /* 캐논 관련 서브 사이트 영역 */
 .main-section-etc {}

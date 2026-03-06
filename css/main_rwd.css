@@ -12,6 +12,12 @@
 
 /* 2. tb~ */
 @media screen and (min-width: 768px) {
+  .main-section h2 {
+
+  font-size: 48px;
+
+}
+
   #canon-main {
   padding-top: 70px; /* 태블릿 헤더 높이 */
 }
@@ -23,6 +29,8 @@
   object-position: center center;
 
 }
+
+
 .etc-container {
   display: flex;
   flex-wrap: wrap;
@@ -58,6 +66,11 @@
 
 /* 4. laptop 1280~ */
 @media screen and (min-width: 1280px) {
+    .main-section h2 {
+
+  font-size: 64px;
+
+}
   #canon-main {
   padding-top: 100px; /* pc 헤더 높이 */
 }
