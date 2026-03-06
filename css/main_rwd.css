@@ -1,0 +1,94 @@
+@charset 'utf-8';
+/* 기본, 모바일 우선 */
+
+/* 1. mo */
+@media screen and (max-width: 767px) {
+  .etc-container {
+  height: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+}
+
+/* 2. tb~ */
+@media screen and (min-width: 768px) {
+  #canon-main {
+  padding-top: 70px; /* 태블릿 헤더 높이 */
+}
+.hero-container {
+  padding-top: 56.25%; /* 4:3 비율 박스 */
+}
+.hero-video {
+
+  object-position: center center;
+
+}
+.etc-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 60%;
+}
+.etc-item {
+  width: 50%;
+  height: 50%;
+  padding: 0 10px 20px;
+  text-align: center;
+  transition: 0.5s;
+}
+.etc-item:hover .item {
+  background-size: 150%;
+  overflow: hidden;
+}
+.item {
+
+  background-size: 120%;
+
+}
+
+
+}
+
+/* 3. only tb */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .etc-container {
+  max-width: 870px;
+  margin: 0 auto;
+}
+}
+
+/* 4. laptop 1280~ */
+@media screen and (min-width: 1280px) {
+  #canon-main {
+  padding-top: 100px; /* pc 헤더 높이 */
+}
+.hero-container {
+  padding-top: 0;
+  height: calc(100vh - 100px);
+}
+.hero-video {
+  position: static;
+  /* position 원래대로 돌려 놓음 */
+}
+.etc-container {
+  display: flex;
+  gap: 1em;
+}
+.etc-item {
+  width: 23%;
+  height: 100%;
+  padding: 0;
+  text-align: center;
+  transition: 0.5s;
+}
+.etc-item:hover .item {
+  background-size: cover;
+}
+.item {
+
+  background-size: cover;
+
+}
+}
+
+/* 5. laptop 1921~ */
+@media screen and (min-width: 1921px) {}

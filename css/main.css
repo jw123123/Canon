@@ -1,0 +1,241 @@
+@charset 'utf-8';
+
+/* 공용클래스 */
+#canon-main {
+  padding-top: 49px;
+  /*모바일 헤더 높이*/
+}
+
+.main-section {
+  min-height: 100vh;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 100px;
+}
+
+.main-section h2 {
+  font-size: 42px;
+    text-align: center;
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+}
+
+.main-container {}
+
+/* 히어로 영역 */
+.main-section-hero {}
+
+.hero-wrap {}
+
+.hero-container {
+  position: relative;
+  padding-top: 100%;
+  /* 1:1 비율 박스 */
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 빈 곳 없이 꽉꽉 채우게 하기(선택 아닌 필수)*/
+  /* 
+  절대로 짤려 나가지 말아야하면 contain
+  fill = 억지로 화면에 맞추는 것
+  */
+  object-position: center top;
+}
+
+/* 신제품 영역 */
+.main-section-new {
+  padding: var(--spacing-m) 0;
+}
+
+.new-wrap {}
+
+.new-container {}
+
+/* 추천 영역 */
+.main-section-recommend {
+}
+
+.recommend-wrap {
+  background: rgba(0, 0, 0, 0.7) url("../images/visual_bgc2.jpg") center left / cover no-repeat;
+  background-blend-mode: darken;
+  
+}
+
+.recommend-wrap>h2 {
+  color: #fff;
+}
+
+.recommend-container {
+  position: relative;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.recommend-wrap {}
+
+.recommend-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.recommend button {
+  color: #fff;
+}
+
+.recommend-list {
+  width: 100%;
+  overflow: hidden;
+}
+
+.recommend-item {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  display: flex;
+  width: 250%;
+  height: 100%;
+}
+
+.item {
+  width: 100%;
+  padding: 0 10px;
+  height: 50%;
+}
+
+.item>a {
+  color: #fff;
+}
+
+.item>a>img {
+  height: 100%;
+}
+
+/* .item1 {background-image: url(../images/EOS_R1.png) ;} */
+.item2 {
+  background-image: url(../images/EOS_R50_V.png);
+}
+
+.item3 {
+  background-image: url(../images/PowerShot_G7_X_Mark_III.png);
+}
+
+.item4 {
+  background-image: url(../images/EOS_C50.png);
+}
+
+/* .recommend {
+  position: absolute;
+  left: 0;
+  top: 200%;
+  display: flex;
+  gap: 2em;
+  width: 100%;
+  overflow: hidden;
+}
+.recommend a {
+  text-align: center;
+}
+.recommend dt {
+  padding-bottom: 1em;
+}
+.re-img > img {
+  width: auto;
+  height: 150px;
+}
+.recommend dd {
+  color: #fff;
+} */
+
+/* 캐논 관련 서브 사이트 영역 */
+.main-section-etc {}
+
+.etc-wrap {
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 2em;
+}
+.title > h3 {
+  font-weight: 500;
+}
+
+.etc-container {
+  height: 100%;
+}
+
+.etc-item {
+  height: 20%;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.etc-item:hover .item {
+  background-size: 120%;
+  overflow: hidden;
+}
+.etc-item:hover .item > span {
+  border-bottom: 4px solid var(--point-color);
+  color: var(--point-color);
+}
+
+.item {
+  position: relative;
+  display: block;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: 0.5s;
+}
+.item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.4;
+}
+
+.item span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+  transition: 0.2s;
+}
+
+.rf {background-image: url("../images/etc_rf.png");}
+
+.catalog {background-image: url("../images/etc_catalog.png");}
+
+.image {background-image: url("../images/etc_image.png");}
+
+.saon {background-image: url("../images/etc_saon.png");}
+
+/* 커뮤니티 영역 */
+.main-section-community {}
+
+.community-wrap {}
+
+.community-container {}
+
+/* 서비스 영역 */
+.main-section-service {}
+
+.service-wrap {}
+
+.service-container {}
