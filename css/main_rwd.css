@@ -96,6 +96,10 @@
 .etc-item:hover .item {
   background-size: cover;
 }
+.etc-item:hover .item > span {
+  border-bottom: none;
+  color: #fff;
+}
 .item {
 
   background-size: cover;
