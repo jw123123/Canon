@@ -108,8 +108,8 @@
   background-size: 120%;
   overflow: hidden;
 }
-.etc-item:hover .item > span {
-  border-bottom: 4px solid var(--point-color);
+.etc-item:hover .item > ul {
+  /* border-bottom: 4px solid var(--point-color); */
   color: var(--point-color);
 }
 
@@ -133,7 +133,7 @@
   opacity: 0.4;
 }
 
-.item span {
+.item ul {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -144,6 +144,30 @@
   transform: translate(-50%, -50%);
   transition: 0.2s;
 }
+
+.item > ul > li {
+  display: none;
+}
+.view{
+  display: none;
+}
+.view span{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: var(--point-color);
+}
+.view span:after{
+  content: '\e315';
+  padding-top: 5px;
+  font-family: var(--google-icon);
+}
+
 
 .rf {background-image: url("../images/etc_rf.png");}
 
@@ -161,8 +185,71 @@
 .community-container {}
 
 /* 서비스 영역 */
-.main-section-service {}
+.main-section-service {
+}
 
 .service-wrap {}
+.service-wrap h2 { margin-bottom: 20px;}
 
-.service-container {}
+.service-container {
+}
+
+.service-list {
+  width: 100%;
+}
+.service-list div {
+  
+}
+.service-item {
+  position: relative;
+  padding: 10px 0;
+  border-bottom: 1px solid #000;
+}
+
+.service-item  a {
+  display: block;
+  transition: 0.3s;
+}
+.service-item a:hover {
+  
+}
+.service-item a:after { /* 애니메이션 라인 */
+  position: absolute;
+  top: 92px;
+  content: '';
+  border-bottom: 2px solid var(--point-color);
+  width: 0;
+  transition: 0.3s;
+}
+.service-item:hover a:after {
+  width: 100%;
+}
+.service-item a:hover ul {
+  color: var(--point-color);
+}
+.service-item ul {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.service-item a ul:before { 
+  font-size: 2.5em;
+}
+.search a ul:before { content: '\f6ea'; font-family: var(--google-icon);} 
+.support a ul:before { content: '\f3ed'; font-family: var(--google-icon);} 
+.registration a ul:before { content: '\ef76'; font-family: var(--google-icon);} 
+.academy a ul:before { content: '\e54b'; font-family: var(--google-icon);} 
+
+.service-contents {
+  font-size: 0.8em;
+  font-weight: normal;
+  padding-top: 3px;
+}
+.search, .support, .registration {border-right:none;}
+.support {}
+.registration {}
+.academy {}

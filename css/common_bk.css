@@ -300,7 +300,7 @@ button {
   padding-bottom: 1em;
   font-size: 0.8em;
   color: rgba(26, 19, 17, 0.5);
-  background-color: #fff;
+  background-color: rgba(26, 19, 17, 0.8);
 }
 
 .ft-logo {
@@ -312,6 +312,7 @@ button {
   flex-direction: column;
   gap: 10px;
   padding: 2em 0;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .policy {
@@ -319,16 +320,17 @@ button {
 
 .policy a {
   padding-right: 10px;
-  color: rgba(26, 19, 17, 0.5);
+  color: rgba(255, 255, 255, 0.8);
   word-break: keep-all;
 }
 
 .policy a:nth-child(2) {
-  color: var(--primary-color);
-  font-weight: 600;
+  color: #fff;
+  font-weight: 700;
 }
 
-.ft-info {}
+.ft-info {
+}
 
 .ft-info span {}
 
@@ -359,8 +361,7 @@ button {
   align-items: center;
   width: 120px;
   padding: 8px;
-  color: var(--primary-color);
-  border: 1px solid #000;
+  background-color: #fff;
 }
 
 .fs-btn:after {
@@ -378,7 +379,7 @@ button {
   flex-wrap: wrap;
   align-items: flex-start;
   background-color: #fff;
-  border: 1px solid rgba(26, 19, 17, 0.3);
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .fs-list>button {
@@ -397,6 +398,8 @@ button {
   justify-content: flex-start;
   padding-bottom: 25px;
   gap: 2em;
+    color: rgba(255, 255, 255, 0.8);
+
 }
 
 .sns {
@@ -412,10 +415,12 @@ button {
   gap: 15px;
   justify-content: center;
   padding-top: 10px;
+  
 }
 
 .icon a {
   /* padding-right: 10px; */
+  color: #fff;
 }
 
 .icon span {
@@ -426,7 +431,7 @@ button {
   left: 0;
   right: 0;
   bottom: 50px;
-  border-bottom: 1px solid rgba(26, 19, 17, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .public {
   display: flex;
@@ -447,6 +452,8 @@ button {
 
 .public span {
   display: none;
+  color: rgba(255, 255, 255, 0.8);
+
 }
 
 
