@@ -112,7 +112,9 @@
   /* border-bottom: 4px solid var(--point-color); */
   color: var(--point-color);
 }
-
+/* .etc-item:hover .text {
+  opacity: 1;
+} */
 .item {
   position: relative;
   display: block;
@@ -144,9 +146,22 @@
   transform: translate(-50%, -50%);
   transition: 0.2s;
 }
+.item ul li {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-.item > ul > li {
-  display: none;
+.text {
+  display: block;
+margin: auto;
+text-align: center;
+  width: 500px;
+ opacity: 0;
+}
+.show {
+  display: block;
+  opacity: 1;
 }
 .view{
   display: none;

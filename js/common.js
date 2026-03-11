@@ -170,6 +170,12 @@ $(function () {
     // "style 속성을 찾아서 없애버리는 문법"
     //attribute - 속성으로 a href=""의 a 속성이 href=""인 것
   }
+  // 부드러운 스크롤 기본 사용
+  const lenis = new Lenis();
+  function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);  
 
 });
-// $(document).ready(function(){});

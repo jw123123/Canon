@@ -164,20 +164,17 @@ display: none;
 .item > ul {
   /* display: none; */
   font-size: 20px;
-  border-bottom: 3px solid #fff;
 }
-.item > ul >li {
-  display: none;
-}
+
 .item:hover ul {
   width: 100%;
   font-size: 56px;
   border-bottom: none;
 }
 .text {
-  display: none;
-  margin: auto;
-  width: 80%;
+ /* position: absolute; */
+  /* margin: auto; */
+
   font-size: 32px;
   font-weight: 500;
   white-space: wrap;

@@ -1,6 +1,7 @@
 $(function () {
   const body = "body";
   const etcItem = ".etc-item";
+  const item = ".item";
   const text = ".text";
   const viewMore = ".view";
 
@@ -9,9 +10,11 @@ $(function () {
     if ($(body).hasClass("pc")) {
       $(this).css("flex-grow", "2.5");
       $(this).siblings().css("flex-grow", "0.5");
-      // $(etcItem).find(">a>ul").removeClass("text");
-      // $(this).find(">a>ul").addClass("text");
-      $(this).find(text).stop().show();
+      $(this).find(text).css("opacity", "1");
+      // $(text).siblings().css("opacity", "0");
+      // $(item).find(">ul>li").addClass("text");
+      // $(item).siblings().find(">ul>li").removeClass("text");
+      // $(this).find(text).addClass("text");
     }
     $(this).find(viewMore).stop().toggle();
     
@@ -20,8 +23,9 @@ $(function () {
     if ($(body).hasClass("pc")) {
       $(this).css("flex-grow", "1");
       $(this).siblings().css("flex-grow", "1");
+      $(this).find(text).css("opacity", "0");
       // $(etcItem).find(">a>ul").removeClass("text");
-      $(this).find(text).stop().hide();
+      // $(this).find(text).stop().hide();
       
     }
     $(this).find(viewMore).stop().toggle();
