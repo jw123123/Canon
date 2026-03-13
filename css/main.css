@@ -195,9 +195,55 @@ text-align: center;
 /* 커뮤니티 영역 */
 .main-section-community {}
 
-.community-wrap {}
+.community-wrap {
+  height: 100vh;
+}
+.community-wrap h2 {
+  padding: 20px;
+  text-align: center;
+  line-height: 40px;
+}
 
-.community-container {}
+
+.community-container {
+  height: 100%;
+  padding-top: 1em;
+}
+
+.community {
+  height: 50%;
+  width: 80%;
+  margin: auto;
+}
+.com-list {
+  background-color: #fff;
+  height: calc(100% / 3);
+  margin-bottom: 2em;
+}
+.brand {}
+.event {}
+.notice {}
+.com-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+}
+.com-title:before {
+  display: none;
+  content: '\e98e';
+  font-family: var(--google-icon);
+  font-size: 50px;
+  font-weight: 200;
+  text-align: left;
+  /* opacity: 0; */
+}
+.com-title span {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+.com-title li {}
+.com-btn {}
 
 /* 서비스 영역 */
 .main-section-service {
