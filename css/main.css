@@ -71,13 +71,59 @@
 }
 
 
-.recommend-wrap {}
+.recommend-wrap {
+}
 
 .recommend-container {
   height: 100vh;
   width: 100%;
 }
+  .btn-list {
+    text-align: center;
+  }
 
+.recommend-button {
+  color: #fff;
+  margin: 2em 0;
+  padding: 0.5em;
+  font-size: 1.2em;
+}
+.recommend-button.active {
+  color: var(--point-color);
+}
+.recommend-item { 
+
+}
+.recommend-item > div { 
+  height: 100%;
+}
+.camera {}
+.item-link {
+  display: block;
+}
+ .item-link img {
+  margin: auto;
+  width: 75%;
+  padding-bottom: 2em;
+}
+ .item-link span {
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: #ddd;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background: var(--point-color);
+  transition: width 0.1s ease;
+}
 
 /* 캐논 관련 서브 사이트 영역 */
 .main-section-etc {}
@@ -112,9 +158,7 @@
   /* border-bottom: 4px solid var(--point-color); */
   color: var(--point-color);
 }
-/* .etc-item:hover .text {
-  opacity: 1;
-} */
+
 .item {
   position: relative;
   display: block;
@@ -147,17 +191,19 @@
   transition: 0.2s;
 }
 .item ul li {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .text {
-  display: block;
-margin: auto;
-text-align: center;
+  position: absolute;
+  left: 50%;
+  display: none;
+  margin: auto;
+  text-align: center;
   width: 500px;
- opacity: 0;
+}
+.text.active{
+  display: block;
+  transform: translateX(-50%);
 }
 .show {
   display: block;
@@ -211,23 +257,25 @@ text-align: center;
 }
 
 .community {
-  height: 50%;
-  width: 80%;
-  margin: auto;
+  height: 100%;
+  width: 100%;
 }
 .com-list {
   background-color: #fff;
   height: calc(100% / 3);
-  margin-bottom: 2em;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.brand {}
-.event {}
-.notice {}
+.brand {background-image: url("../images/brand_img1.jpg");}
+.event {background-image: url("../images/event_img3.jpg");}
+.notice {background-image: url("../images/support_img1.jpg"); background-position: bottom center;}
 .com-title {
-  display: flex;
+  height: 100%;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: auto;
+  margin: auto; */
 }
 .com-title:before {
   display: none;
@@ -238,15 +286,28 @@ text-align: center;
   text-align: left;
   /* opacity: 0; */
 }
-.com-title span {
-  font-size: 1.2em;
-  font-weight: 600;
-}
+
 .com-title li {}
-.com-btn {}
+.com-btn {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  padding-top: 2em;
+}
+.com-btn dt {
+  font-size: 2em;
+  font-weight: 700;
+}
+.com-btn dd {
+  font-size: 1.2em;
+  font-weight: 500;
+}
 
 /* 서비스 영역 */
 .main-section-service {
+  padding-top: 50px;
 }
 
 .service-wrap {}

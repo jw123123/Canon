@@ -7,6 +7,7 @@
   <title>캐논코리아</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/common_rwd.css">
   <link rel="stylesheet" href="css/main.css">
@@ -14,6 +15,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/lenis.min.js"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/main.js"></script>
 </head>
@@ -236,6 +238,25 @@
       <div class="recommend-wrap wrap">
         <h2>recommend</h2>
         <div class="main-container recommend-container">
+          <div class="btn-list">
+            <button class="recommend-button camera active">Camera</button>
+            <button class="recommend-button lens">Lens</button>
+            <button class="recommend-button camcoder">Camcoder</button>
+            <button class="recommend-button etc">etc</button>
+          </div>
+          <div class="recommend-item">
+            <div><a href="#" class="item-link"><img src="images/EOS_R50_V.png" alt="EOS_R50_V 카메라"><span>EOS_R50_V</span></a></div>
+            <div><a href="#" class="item-link"><img src="images/EOS_C50.png" alt="EOS_C50 카메라"><span>EOS_C50</span></a></div>
+            <div><a href="#" class="item-link"><img src="images/PowerShot_G7_X_Mark_III.png"
+                alt="PowerShot_G7_X_Mark_III 카메라"><span>PowerShot_G7_X_Mark_III</span></a></div>
+            <div><a href="#" class="item-link"><img src="images/EOS_R50_V.png" alt="EOS_R50_V 카메라"><span>EOS_R50_V</span></a></div>
+            <div><a href="#" class="item-link"><img src="images/EOS_C50.png" alt="EOS_C50 카메라"><span>EOS_C50</span></a></div>
+            <div><a href="#" class="item-link"><img src="images/PowerShot_G7_X_Mark_III.png"
+                alt="PowerShot_G7_X_Mark_III 카메라"><span>PowerShot_G7_X_Mark_III</span></a></div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -288,27 +309,30 @@
         <h2>Canon Community</h2>
         <div class="main-container community-container">
           <div class="community">
-            <div class="com-list brand">
-              <ul class="com-title">
-                <span>브랜드소식</span>
-                <li>캐논의 새로운 소식을 확인해보세요.</li>
-                <a href="" class="com-btn"></a>
-              </ul>
-            </div>
-            <div class="com-list event">
-              <ul class="com-title">
-                <span>EVENT</span>
-                <li>캐논에서 진행중인 이벤트를 확인해보세요.</li>
-                <a href="" class="com-btn"></a>
-              </ul>
-            </div>
-            <div class="com-list notice">
-              <ul class="com-title">
-                <span>공지사항</span>
-                <li>캐논의 공지사항을 확인해보세요.</li>
-                <a href="" class="com-btn"></a>
-              </ul>
-            </div>
+            <dl class="com-list brand">
+              <div class="com-title">
+                <a href="#" class="com-btn">
+                  <dt>브랜드소식</dt>
+                  <dd>캐논의 새로운 소식을 확인해보세요.</dd>
+                </a>
+              </div>
+            </dl>
+            <dl class="com-list event">
+              <div class="com-title">
+                <a href="#" class="com-btn">
+                  <dt>EVENT</dt>
+                  <dd>캐논에서 진행중인 이벤트를 확인해보세요.</dd>
+                </a>
+              </div>
+            </dl>
+            <dl class="com-list notice">
+              <div class="com-title">
+                <a href="#" class="com-btn">
+                  <dt>공지사항</dt>
+                  <dd>캐논의 공지사항을 확인해보세요.</dd>
+                </a>
+              </div>
+            </dl>
           </div>
         </div>
       </div>
