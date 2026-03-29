@@ -85,4 +85,10 @@ $(function () {
       }
     ]
   });
+
+  // 신제품 스와이퍼
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      effect: "fade"
+    });
 });

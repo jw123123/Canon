@@ -243,9 +243,8 @@
 
   .view span {
 
-    right: 30px;
 
-    bottom: 40px;
+    bottom: 20%;
 
   }
 
@@ -263,6 +262,11 @@
     font-size: 56px;
     border-bottom: none;
   }
+.item ul {
+
+  top: 40%;
+
+}
 
   .text {
     font-size: 32px;

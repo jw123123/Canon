@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>캐논코리아</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/common_rwd.css">
   <link rel="stylesheet" href="css/main.css">
@@ -16,6 +17,7 @@
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/lenis.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="js/common.js"></script>
   <script src="js/main.js"></script>
 </head>
@@ -226,10 +228,30 @@
     </section>
 
     <section class="main-section main-section-new">
-      <div class="new-wrap">
+      <div class="new-wrap wrap">
         <h2>new product</h2>
         <div class="main-container new-container">
-
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+              </div>
+            </div>
+          </div>
+          <div class="new-list">
+            <a href="" class="new">카메라</a>
+            <a href="" class="new">렌즈</a>
+            <a href="" class="new">프린터</a>
+          </div>
         </div>
       </div>
     </section>
@@ -245,14 +267,18 @@
             <button class="recommend-button etc">etc</button>
           </div>
           <div class="recommend-item">
-            <div><a href="#" class="item-link"><img src="images/EOS_R50_V.png" alt="EOS_R50_V 카메라"><span>EOS_R50_V</span></a></div>
-            <div><a href="#" class="item-link"><img src="images/EOS_C50.png" alt="EOS_C50 카메라"><span>EOS_C50</span></a></div>
+            <div><a href="#" class="item-link"><img src="images/EOS_R50_V.png"
+                  alt="EOS_R50_V 카메라"><span>EOS_R50_V</span></a></div>
+            <div><a href="#" class="item-link"><img src="images/EOS_C50.png" alt="EOS_C50 카메라"><span>EOS_C50</span></a>
+            </div>
             <div><a href="#" class="item-link"><img src="images/PowerShot_G7_X_Mark_III.png"
-                alt="PowerShot_G7_X_Mark_III 카메라"><span>PowerShot_G7_X_Mark_III</span></a></div>
-            <div><a href="#" class="item-link"><img src="images/EOS_R50_V.png" alt="EOS_R50_V 카메라"><span>EOS_R50_V</span></a></div>
-            <div><a href="#" class="item-link"><img src="images/EOS_C50.png" alt="EOS_C50 카메라"><span>EOS_C50</span></a></div>
+                  alt="PowerShot_G7_X_Mark_III 카메라"><span>PowerShot_G7_X_Mark_III</span></a></div>
+            <div><a href="#" class="item-link"><img src="images/EOS_R50_V.png"
+                  alt="EOS_R50_V 카메라"><span>EOS_R50_V</span></a></div>
+            <div><a href="#" class="item-link"><img src="images/EOS_C50.png" alt="EOS_C50 카메라"><span>EOS_C50</span></a>
+            </div>
             <div><a href="#" class="item-link"><img src="images/PowerShot_G7_X_Mark_III.png"
-                alt="PowerShot_G7_X_Mark_III 카메라"><span>PowerShot_G7_X_Mark_III</span></a></div>
+                  alt="PowerShot_G7_X_Mark_III 카메라"><span>PowerShot_G7_X_Mark_III</span></a></div>
           </div>
           <div class="progress-bar">
             <div class="progress"></div>
@@ -263,7 +289,7 @@
 
     <section class="main-section main-section-etc">
       <div class="wrap etc-wrap">
-        <div class="title">
+        <div class="etc-title">
           <h2>Canon is Now</h2>
           <h3>이미지 기술이 만들어가는 지금의 캐논</h3>
         </div>
