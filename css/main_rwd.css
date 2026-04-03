@@ -72,6 +72,17 @@
 
   }
 
+  .view {
+    padding: 5px 5px 5px 15px;
+    width: 130px;
+    right: 50%;
+    bottom: 25%;
+    transform: translateX(50%);
+    font-size: 1em;
+  }
+
+
+  /* 서비스 영역 */
   .service-list {
     display: flex;
     width: 100%;
@@ -172,6 +183,29 @@
     /* position 원래대로 돌려 놓음 */
   }
 
+  /* 신제품영역 */
+  .swiper-wrapper {
+    width: 40%;
+  }
+
+  .new-img img {
+
+    width: 65%;
+
+  }
+
+  .new-list {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    font-size: 1.7em;
+    z-index: 1;
+  }
+
+
 
   /* 제품영역 */
   .recommend-wrap {
@@ -241,11 +275,16 @@
     top: 45%;
   }
 
-  .view span {
-
-
-    bottom: 20%;
-
+  .view {
+    display: none;
+    padding: 5px 5px 5px 15px;
+    width: 130px;
+    right: 50%;
+    bottom: 22%;
+    font-size: 1em;
+  }
+  .etc-item:last-child .view {
+    bottom: 30%; 
   }
 
   .item {
@@ -262,11 +301,12 @@
     font-size: 56px;
     border-bottom: none;
   }
-.item ul {
 
-  top: 40%;
+  .item ul {
 
-}
+    top: 40%;
+
+  }
 
   .text {
     font-size: 32px;

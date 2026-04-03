@@ -54,36 +54,76 @@
 
 .new-wrap {}
 
+.new-wrap h2 {
+  padding-bottom: 40px;
+}
+
 .new-container {
   position: relative;
 }
 
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
 
-    .swiper-slide {
-      background-position: center;
-      background-size: cover;
-    }
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+}
 
-    .swiper-slide img {
-      display: block;
-      width: 50%;
-    }
-    .new-list {
-      position: absolute;
-      right: 0;
-      bottom: 10%;
-      display: flex;
-      flex-direction: column;
-      font-size: 2em;
-      width: 30%;
-    }
-    .new-list a:after {
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+}
+
+.new-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 75%;
+}
+
+.new-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.new-list {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  font-size: 1.7em;
+  z-index: 1;
+}
+
+.new-list>.active>a {
+  color: var(--point-color);
+  border-bottom: 2px solid var(--point-color);
+}
+
+.new-list a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+
+.new-list a:after {
   content: '\e315';
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: var(--google-icon);
 }
 
@@ -186,15 +226,8 @@
   transition: 0.5s;
 }
 
-.etc-item:hover .item {
-  background-size: 120%;
-  overflow: hidden;
-}
 
-.etc-item:hover .item>ul {
-  /* border-bottom: 4px solid var(--point-color); */
-  color: var(--point-color);
-}
+
 
 .item {
   position: relative;
@@ -251,25 +284,31 @@
 }
 
 .view {
-  display: none;
+  /* display: block; */
 }
 
-.view span {
+.view {
   position: absolute;
   right: 20px;
   bottom: 20px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  font-size: 1.2em;
-  font-weight: 600;
+  padding: 3px 5px 3px 15px;
+  width: 110px;
+  background-color: #af0109;
+  border-radius: 20px;
   color: #fff;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.view span{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .view span:after {
   content: '\e315';
-  padding-top: 5px;
   font-family: var(--google-icon);
+  font-size: 1.2em;
 }
 
 

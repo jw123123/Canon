@@ -7,6 +7,7 @@ $(function () {
   const slider = $(".recommend-item");
   const bar = $(".progress");
   let speed = 3000;
+  const newItemList = $('.new-list li');
 
 
   //etc 영역
@@ -15,8 +16,8 @@ $(function () {
       $(this).css("flex-grow", "2.5");
       $(this).siblings().css("flex-grow", "0.5");
       $(this).find(text).addClass("active");
+      $(this).find(viewMore).stop().toggle();
     }
-    $(this).find(viewMore).stop().toggle();
 
   });
   $(etcItem).mouseleave(function () {
@@ -24,9 +25,8 @@ $(function () {
       $(this).css("flex-grow", "1");
       $(this).siblings().css("flex-grow", "1");
       $(this).find(text).removeClass("active");
-
+      $(this).find(viewMore).stop().toggle();
     }
-    $(this).find(viewMore).stop().toggle();
 
   });
 
@@ -87,8 +87,43 @@ $(function () {
   });
 
   // 신제품 스와이퍼
-    var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      effect: "fade"
-    });
+  let swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    effect: "fade",
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+   on: {
+      init: function() {
+        // 초기 로드 시 첫 번째 아이템에 active 추가
+        newItemList.eq(0).addClass('active');
+      },
+      slideChange: function() {
+        // 슬라이드가 바뀔 때마다 실행 (자동재생 연동)
+        const activeIndex = this.realIndex;
+        
+        // 모든 li에서 active 제거하고 현재 인덱스만 추가
+        newItemList.removeClass('active');
+        newItemList.eq(activeIndex).addClass('active');
+      }
+    }
+  });
+
+
+
+  // 마우스를 올렸을 때
+  newItemList.on('mouseenter', function () {
+    // $(this).index() 가 핵심입니다. 
+    // 별도의 id나 data 없이도 "내가 몇 번째 li인가"를 알아냅니다.
+    let idx = $(this).index();
+
+    // 해당 번호의 슬라이드로 이동
+    swiper.slideTo(idx);
+    swiper.autoplay.stop();
+  });
+  newItemList.on('mouseleave', () => {
+    // 마우스를 떼면 다시 자동 재생 시작
+    swiper.autoplay.start();
+  });
 });
