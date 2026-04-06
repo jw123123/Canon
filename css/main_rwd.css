@@ -3,6 +3,14 @@
 
 /* 1. mo */
 @media screen and (max-width: 767px) {
+  .new-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 75%;
+  }
+
   .etc-container {
     height: 100%;
     max-width: 480px;
@@ -33,6 +41,10 @@
     object-position: center center;
 
   }
+
+  /* 신제품영역 */
+
+
 
   /* 제품영역 */
 
@@ -67,9 +79,16 @@
   }
 
   .item {
-
     background-size: 120%;
+  }
 
+  .item:before {
+    background: #000;
+    opacity: 0.5;
+  }
+
+  .item ul {
+    top: 42%;
   }
 
   .view {
@@ -146,6 +165,13 @@
 
 /* 3. only tb */
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+  .new-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 56.25%;
+  }
 
   .etc-container {
     max-width: 870px;
@@ -184,24 +210,26 @@
   }
 
   /* 신제품영역 */
-  .swiper-wrapper {
-    width: 40%;
+  .swiper {
+    height: calc(100vh - 300px);
   }
 
+  .swiper-wrapper {}
+
   .new-img img {
-
-    width: 65%;
-
+    width: 60%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .new-list {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 10px;
     display: flex;
     flex-direction: column;
     width: 30%;
-    font-size: 1.7em;
+    font-size: 1em;
     z-index: 1;
   }
 
@@ -269,26 +297,32 @@
     background-size: cover;
   }
 
+  .etc-item:hover .item:before {
+    background: #000;
+    opacity: 0.5;
+  }
+
   .etc-item:hover .item>ul {
     border-bottom: none;
     color: #fff;
     top: 45%;
   }
 
+
   .view {
     display: none;
-    padding: 5px 5px 5px 15px;
-    width: 130px;
-    right: 50%;
-    bottom: 22%;
+    /* width: 130px; */
+    /* bottom: 50%; */
     font-size: 1em;
-  }
-  .etc-item:last-child .view {
-    bottom: 30%; 
+    transform: translate(50%, 50%);
   }
 
   .item {
     background-size: cover;
+  }
+
+  .item:before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.5) 90%);
   }
 
   .item>ul {
@@ -302,6 +336,11 @@
     border-bottom: none;
   }
 
+  .etc-item:nth-child(1)>.item:hover ul,
+  .etc-item:nth-child(2)>.item:hover ul {
+    padding-bottom: 40px;
+  }
+
   .item ul {
 
     top: 40%;
@@ -309,7 +348,7 @@
   }
 
   .text {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 500;
     white-space: wrap;
     word-break: keep-all;
