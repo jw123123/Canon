@@ -344,8 +344,18 @@
   }
 
   .com-list {
-    height: calc(100% / 3);
+    height: 100%;
+    opacity: 0;
+  }
+  .com-list:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     background-color: #fff;
+    z-index: 3;
   }
 
   .com-title {
@@ -365,6 +375,9 @@
   .com-btn dt {
     font-size: 1.2em;
     font-weight: 600;
+  }
+  .com-btn dd {
+    word-break: keep-all;
   }
 }
 
