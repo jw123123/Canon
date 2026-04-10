@@ -80,9 +80,6 @@
 }
 
 .new-img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   padding-top: 75%;
 }
@@ -131,7 +128,7 @@
 .main-section-recommend {}
 
 .recommend-wrap {
-  background: rgba(0, 0, 0, 0.7) url("../images/visual_bgc2.jpg") center left / cover no-repeat;
+  background: rgba(0, 0, 0, 0.5) url("../images/visual_bgc2.jpg") center left / cover no-repeat;
   background-blend-mode: darken;
 
 }
@@ -157,6 +154,7 @@
   margin: 2em 0;
   padding: 0.5em;
   font-size: 1.2em;
+  text-shadow: #000 5px 8px 10px;
 }
 
 .recommend-button.active {
@@ -240,14 +238,13 @@
 }
 
 .item:before {
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,0.5) 90%);
   content: '';
   position: absolute;
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: #000;
-  opacity: 0.4;
 }
 
 .item ul {
@@ -283,9 +280,6 @@
   opacity: 1;
 }
 
-.view {
-  /* display: block; */
-}
 
 .view {
   position: absolute;
@@ -353,11 +347,21 @@
 }
 
 .com-list {
+  position: relative;
   background-color: #fff;
   height: calc(100% / 3);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.com-list::before {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.2) 10%, rgba(0,0,0,0) 50%);
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .brand {
