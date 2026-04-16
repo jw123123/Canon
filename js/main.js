@@ -87,28 +87,28 @@ $(function () {
   });
 
   // 신제품 스와이퍼
-  // let swiper = new Swiper(".mySwiper", {
-  //   spaceBetween: 30,
-  //   effect: "fade",
-  //   autoplay: {
-  //     delay: 2000,
-  //     disableOnInteraction: false,
-  //   },
-  //  on: {
-  //     init: function() {
-  //       // 초기 로드 시 첫 번째 아이템에 active 추가
-  //       newItemList.eq(0).addClass('active');
-  //     },
-  //     slideChange: function() {
-  //       // 슬라이드가 바뀔 때마다 실행 (자동재생 연동)
-  //       const activeIndex = this.realIndex;
+  let swiper = new Swiper(".myswiper", {
+    spaceBetween: 30,
+    effect: "fade",
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+   on: {
+      init: function() {
+        // 초기 로드 시 첫 번째 아이템에 active 추가
+        newItemList.eq(0).addClass('active');
+      },
+      slideChange: function() {
+        // 슬라이드가 바뀔 때마다 실행 (자동재생 연동)
+        const activeIndex = this.realIndex;
         
-  //       // 모든 li에서 active 제거하고 현재 인덱스만 추가
-  //       newItemList.removeClass('active');
-  //       newItemList.eq(activeIndex).addClass('active');
-  //     }
-  //   }
-  // });
+        // 모든 li에서 active 제거하고 현재 인덱스만 추가
+        newItemList.removeClass('active');
+        newItemList.eq(activeIndex).addClass('active');
+      }
+    }
+  });
 
 
 
@@ -125,5 +125,5 @@ $(function () {
   newItemList.on('mouseleave', () => {
     // 마우스를 떼면 다시 자동 재생 시작
     swiper.autoplay.start();
-  });
+  }); 
 });
