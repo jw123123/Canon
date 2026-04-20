@@ -23,17 +23,28 @@
     animation: move-right 1s 0.5s both;
 }
 .cv-lnb-btn {}
-.cv-lnb-list {
+.depth2-list {
     display: none;
+    position: relative;
+    justify-content: center;
+    gap: 5em;
 }
-.cv-lnb-depth2 {}
-.cv-lnb-list li {}
-.cv-lnb-list a {
-    display: block;
+.depth2-list li {
+
 }
-.cv-lnb-list a:hover {
+.depth2-list a {
+}
+.depth2-list a:hover {
     color: var(--main-color);
     font-weight: 600;
+}
+
+.sub-depth3{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 500%;
+    flex-direction: column;
 }
 
 /* 비주얼 */
@@ -100,7 +111,7 @@
         font-size: 1.1em;
         background: url('../images/svg/i_more.svg') right center / auto 24px no-repeat;
     }
-    .cv-lnb-list {
+    .depth2-list {
         display: none;
         position: absolute;
         left: 0;
@@ -123,23 +134,23 @@
     .cv-lnb-btn {
         display: none;
     }
-    .cv-lnb-list {
+    .depth2-list {
         /* display: flex; */
         margin: 1.5em 0;
         font-size: 1.2em;
         font-weight: 700;
     }
-    .cv-lnb-list li {
+    .depth2-list li {
         padding: 0 5px;
         margin-right: 2em;
     }
-    .cv-lnb-list a {
+    .depth2-list a {
         color: var(--pale-gray);
     }
-    .cv-lnb-list li.active {
+    .depth2-list li.active {
         border-bottom: 3px solid var(--main-color);
     }
-    .cv-lnb-list li.active a {
+    .depth2-list li.active a {
         color: var(--main-color);
         font-weight: 600;
     }

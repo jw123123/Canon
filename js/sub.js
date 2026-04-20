@@ -4,7 +4,7 @@ $(function () {
   const subH2 = $(".sub-hd-lnb h2");
   const lnbBtn = $(".cv-lnb-btn");
   const subBg = $(".sub-hd-bg");
-  let lnb = $(".cv-lnb-list");
+  let lnb = $(".depth2-list");
   let pageTitle = "Consumer,Business,Event,Service,Support,Company";
   // 문자들을 분기(,를 기준으로 분리하는 것)해서 배열로 만듦
   pageTitle = pageTitle.split(","); // ,로 자르는 배열 메서드 -> 여기까지 거치면 5개의 배열로 잘려짐
@@ -34,12 +34,18 @@ $(function () {
   // LNB 화면에 표시(해상도에 따라)
   if (body.hasClass("mo")) { // 모바일이라면
     lnb.eq(mainNum).css("display", "none");
+    subEl.find(".sub-depth3").css("display", "none");
   } else {
     lnb.eq(mainNum).css("display", "flex");
+    subEl.find(".sub-depth3").css("display", "flex");
   }
 
   // 활성화되는 서브메뉴
   subEl.addClass("active");
+
+  if (subEl.hasClass("active")) {
+    subEl.find(".sub-depth3").addClass("active");
+  }
 
   // 모바일 LNB Label 입력
   lnbBtn.text(subEl.text());
@@ -55,7 +61,7 @@ $(function () {
 
 
   // LNB 제어(mo에서 버튼 클릭하면 하위리스트 열리기)
-  lnbBtn.click(function(){
+  lnbBtn.click(function () {
     lnb.eq(mainNum).toggle();
   });
 
