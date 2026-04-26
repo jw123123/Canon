@@ -1,5 +1,4 @@
 @charset 'UTF-8';
-@import url('var.css');
 /* 헤더 고정 */
 #cv-hd.fixed {
     background-color: #fff;
@@ -7,44 +6,67 @@
 }
 /* 서브 헤더 */
 .sub-hd {
+    height: 90vh;
     padding-top: 100px;
 }
 .sub-hd-lnb {
-    
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 .sub-hd-lnb h2 {
+    position: absolute;
+    left: 0;
+    top: 30%;
     font-weight: 600;
     font-size: 2em;
     color: #111;
-    animation: move-bottom 1s;
 }
 #cv-lnb {
+    position: relative;
+    height: 100%;
     font-family: var(--sans-pre);
     animation: move-right 1s 0.5s both;
 }
 .cv-lnb-btn {}
 .depth2-list {
     display: none;
-    position: relative;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    padding: 0.8em 3em;
+    transform: translateX(-50%);
+    gap: 3em;
     justify-content: center;
-    gap: 5em;
+     border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
-.depth2-list li {
-
+.depth2-list > li {
 }
 .depth2-list a {
 }
 .depth2-list a:hover {
-    color: var(--main-color);
+    color: var(--point-color);
     font-weight: 600;
+    border-bottom: 2px solid var(--point-color);
 }
 
 .sub-depth3{
     display: none;
     position: absolute;
-    left: 0;
+    left: -150%;
     top: 500%;
     flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+.sub-depth3 a{
+    font-weight: 300;
+
 }
 
 /* 비주얼 */
@@ -72,13 +94,13 @@
     transform-origin: right center; 
     animation: sub-visual-ani 1s both;
 }
-.bg0-0 {background-image: url('../images/sub_visual/overviewBg.jpg'); background-position: -20vw 0;}
+.bg0-0 {background-image: url('../images/consumer_bg.jpg');}
 .bg0-1 {background-image: url('../images/sub_visual/philosophyBg.jpg');}
 .bg0-5 {background-image: url('../images/sub_visual/placeBg.jpg'); background-position: 0 0;}
 .bg1-0 {background-image: url('../images/sub_visual/pouchBg.jpg');}
 .bg2-0 {background-image: url('../images/sub_visual/ciBg.jpg');}
 .bg3-0 {background-image: url('../images/sub_visual/esgBg.jpg');}
-.bg4-0 {background-image: url('../images/sub_visual/talentBg.jpg');}
+.bg5-0 {background-image: url('../images/visual_bgc2.jpg');}
 
 /* 메인 영역 */
 #cv-main, #cv-main > * {
@@ -135,14 +157,10 @@
         display: none;
     }
     .depth2-list {
-        /* display: flex; */
-        margin: 1.5em 0;
-        font-size: 1.2em;
-        font-weight: 700;
+
     }
     .depth2-list li {
         padding: 0 5px;
-        margin-right: 2em;
     }
     .depth2-list a {
         color: var(--pale-gray);
@@ -196,13 +214,17 @@
     .sub-sec h2 {
         font-size: 2.4em;
     }
+.depth2-list a {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+}
+.depth2-list > li.active > a {
+    color: var(--point-color);
 }
 
 /* 4. pc 1600px부터~ */
 @media screen and (min-width: 1600px) {
-    .sub-hd .wrap, #cv-main .wrap {
-        max-width: 1580px;
-    } 
 }
 
 

@@ -1,0 +1,27 @@
+@charset 'utf-8';
+
+#product-main {
+  height: 100vh;
+}
+.product-sec {}
+.product-container {
+  height: 100%;
+}
+.card-list {
+  display: flex;
+  gap: 1em;
+  justify-content: flex-end;
+}
+.product-card {
+  width: 300px;
+  height: 400px;
+  padding: 2em;
+  background-color: #ff0;
+}
+.product-card img {
+  width: 100%;
+  margin: 0 auto;
+}
+.product-content {}
+.product-title {}
+.product-txt {}

@@ -1,0 +1,54 @@
+@charset 'utf-8';
+
+/* 브랜드가치 영역 */
+.sub-section-worth {
+  position: relative;
+  height: 300vh;
+  padding: 0;
+}
+.worth-wrap {
+  position: sticky;
+      top: 0;
+    height: 100vh;
+}
+.worth-container {
+  height: 100%;
+}
+.worth {
+  height: 100%;
+}
+.worth-slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+  height: 100%;
+  padding: 0 6px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mission {background-image: url(../images/company_mission.png);}
+.vision {background-image: url(../images/company_vision.png);}
+.value {background-image: url(../images/company_value.png);}
+.point-txt {
+  color: var(--point-color);
+}
+.worth-title {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  color: #fff;
+  font-size: 3em;
+  font-weight: 900;
+}
+.worth-content {
+  font-size: 24px;
+  font-weight: 500;
+}
+.worth-content ul {
+  display: flex;
+}
+.worth-content li:before {
+  content: ' : ';
+}
