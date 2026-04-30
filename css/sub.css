@@ -37,10 +37,10 @@
     left: 50%;
     padding: 0.8em 3em;
     transform: translateX(-50%);
-    gap: 3em;
+    gap: 2em;
     justify-content: center;
      border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
@@ -57,7 +57,7 @@
 .sub-depth3{
     display: none;
     position: absolute;
-    left: -150%;
+    left: -180%;
     top: 500%;
     flex-direction: column;
     gap: 20px;
@@ -66,7 +66,12 @@
 }
 .sub-depth3 a{
     font-weight: 300;
+    
+}
 
+.sub-depth3 a.active{
+    color: var(--point-color);
+    border-bottom: 2px solid var(--point-color);
 }
 
 /* 비주얼 */
@@ -100,12 +105,11 @@
 .bg1-0 {background-image: url('../images/sub_visual/pouchBg.jpg');}
 .bg2-0 {background-image: url('../images/sub_visual/ciBg.jpg');}
 .bg3-0 {background-image: url('../images/sub_visual/esgBg.jpg');}
-.bg5-0 {background-image: url('../images/visual_bgc2.jpg');}
+.bg5-0 {background-image: url('../images/company_ban_img.png');}
 
 /* 메인 영역 */
-#cv-main, #cv-main > * {
-    padding-top: 22px;
-    padding-bottom: 22px;
+.sub-section {
+    height: 100vh;
 }
 .sub-sec h2 {
     font-size: 1.5em;
@@ -161,16 +165,13 @@
     }
     .depth2-list li {
         padding: 0 5px;
+        white-space: nowrap;
     }
     .depth2-list a {
-        color: var(--pale-gray);
     }
     .depth2-list li.active {
-        border-bottom: 3px solid var(--main-color);
     }
     .depth2-list li.active a {
-        color: var(--main-color);
-        font-weight: 600;
     }
     /* 비주얼 이미지 */
     .sub-hd-bg {

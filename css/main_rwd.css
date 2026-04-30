@@ -37,9 +37,6 @@
   }
 
   .hero-video {
-
-    object-position: center center;
-
   }
 
   /* 신제품영역 */
@@ -202,7 +199,6 @@
 
   .hero-video {
     position: static;
-    /* position 원래대로 돌려 놓음 */
   }
 
   /* 신제품영역 */
@@ -383,13 +379,7 @@
     height: 100%;
     background-color: #fff;
   }
-  .com-list:hover:before {
-    opacity: 0;
-  }
-  .com-list:hover .com-btn:before {
-    content: '';
-    display: none;
-  }
+
   
   
   .com-btn {
