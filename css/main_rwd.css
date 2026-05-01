@@ -36,8 +36,7 @@
     /* 4:3 비율 박스 */
   }
 
-  .hero-video {
-  }
+  .hero-video {}
 
   /* 신제품영역 */
 
@@ -202,17 +201,15 @@
   }
 
   /* 신제품영역 */
- .myswiper{
+  .myswiper {
     height: 650px;
     width: 60%;
     margin-left: 0;
   }
-  .swiper-wrapper {
-  }
 
-  .new-img img {
+  .swiper-wrapper {}
 
-  }
+  .new-img img {}
 
   .new-list {
     position: absolute;
@@ -224,6 +221,7 @@
     font-size: 1.7em;
     z-index: 1;
   }
+
   .new-list li {
     padding: 0 1em;
   }
@@ -306,8 +304,9 @@
     bottom: 25%;
     font-size: 1em;
   }
+
   .etc-item:last-child .view {
-    bottom: 30%; 
+    bottom: 30%;
   }
 
   .item {
@@ -345,7 +344,7 @@
     padding-top: 2em;
     background-color: rgba(220, 0, 12, 0.4);
   }
-  
+
   .community-wrap>h2 {
     padding: 50px 0;
     font-size: 80px;
@@ -353,23 +352,25 @@
     width: 35%;
     line-height: 1.1;
   }
+
   .community-container {
     height: auto;
   }
-  
+
   .community {
     display: flex;
     gap: 1.5em;
     justify-content: flex-end;
     height: 300px;
   }
-  
+
   .com-list {
     position: relative;
     height: 100%;
     max-width: 350px;
     flex: 1;
   }
+
   .com-list:before {
     content: '';
     position: absolute;
@@ -380,17 +381,20 @@
     background-color: #fff;
   }
 
-  
-  
+  .com-title:hover dd {
+    display: block;
+  }
+
   .com-btn {
     position: relative;
     display: flex;
     flex-direction: column;
-    padding: 0px 20px;
+    gap: 1em;
+    padding: 20px;
     text-align: center;
     z-index: 3;
   }
-  
+
   .com-btn:before {
     position: relative;
     display: block;
@@ -401,21 +405,23 @@
     text-align: left;
     z-index: 3;
   }
-.com-btn {
-  padding-top: 0;
-}
 
-.com-btn dt {
-  font-size: 1.2em;
-  font-weight: 600;
-}
+  .com-btn dt {
+    font-size: 1.5em;
+    font-weight: 700;
+  }
 
-/* 서비스영역 */
-.service-item a ul:before {
-  font-size: 5em;
-  height: inherit;
+  .com-btn dd {
+    display: none;
+    word-break: keep-all;
+  }
 
-}
+  /* 서비스영역 */
+  .service-item a ul:before {
+    font-size: 5em;
+    height: inherit;
+
+  }
 }
 
 /* 5. laptop 1921~ */
