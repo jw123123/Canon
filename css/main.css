@@ -333,7 +333,7 @@ padding-top: 2em;
   padding-top: 1em;
 }
 
-.community {
+.community, .community2 {
   height: 100%;
   width: 100%;
 }
@@ -344,7 +344,7 @@ padding-top: 2em;
   height: calc(100% / 3);
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 120%;
 }
 .com-list::before {
   /* background: linear-gradient(to bottom, rgba(0,0,0,0.2) 10%, rgba(0,0,0,0) 50%); */
@@ -358,6 +358,8 @@ padding-top: 2em;
 
 .brand {
   background-image: url("../images/brand_img1.jpg");
+    transition: 0.5s;
+
 }
 
 .event {
@@ -367,24 +369,13 @@ padding-top: 2em;
 .notice {
   background-image: url("../images/support_img1.jpg");
   background-position: bottom center;
+    transition: 0.5s;
+
 }
 
 .com-title {
   height: 100%;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto; */
-}
 
-.com-title:before {
-  display: none;
-  content: '\e98e';
-  font-family: var(--google-icon);
-  font-size: 50px;
-  font-weight: 200;
-  text-align: left;
-  /* opacity: 0; */
 }
 
 .com-title li {}
@@ -431,26 +422,17 @@ padding-top: 2em;
 
 .service-item {
   position: relative;
-  padding: 10px 0;
-  border-bottom: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+    margin-bottom: 1em;
 }
 
 .service-item a {
-  display: block;
-  transition: 0.3s;
 }
 
 .service-item a:hover {}
 
-.service-item a:after {
-  /* 애니메이션 라인 */
-  position: absolute;
-  top: 92px;
-  content: '';
-  border-bottom: 2px solid var(--point-color);
-  width: 0;
-  transition: 0.3s;
-}
 
 .service-item:hover a:after {
   width: 100%;

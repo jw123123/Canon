@@ -5,6 +5,9 @@
   background-attachment: fixed;
 }
 
+.sub-depth3{
+  display: none !important;
+}
 
 /* 슬로건 영역 */
 .sub-section-banner{}
@@ -146,8 +149,6 @@ transform: translate(-50%, -50%);
 /* 2. tb~ */
 @media screen and (min-width: 768px) {
   #company-main{
-  background: url(../images/banner_bg.png) bottom right / cover no-repeat;
-  background-attachment: fixed;
 }
   /* 슬로건 영역 */
 .banner-wrap{
@@ -221,6 +222,11 @@ transform: translate(-50%, -50%);
 
 /* 4. laptop 1280~ */
 @media screen and (min-width: 1280px) {
+  #company-main{
+background-position: bottom center;
+}
+
+
   .worth-slider {
 
   padding: 0 105px;

@@ -130,11 +130,17 @@
     font-size: 1em;
   }
 
+  /* 커뮤니티 영역 */
+  .com-list {
+
+  background-size: 100%;
+
+}
+
 
   /* 서비스 영역 */
   
   .service-container{
-  /* height: 50vh; */
   padding-top: 2em;
 }
 
@@ -240,7 +246,7 @@ transition: 0.5s;
   }
 
   .hero-video {
-
+object-fit: cover;
 
   }
 
@@ -358,7 +364,6 @@ transition: 0.5s;
   }
 
   .item>ul {
-    /* display: none; */
     font-size: 20px;
   }
 
@@ -383,12 +388,15 @@ transition: 0.5s;
 
   /* 커뮤니티 영역 */
   .community-wrap {
-    height: 700px;
+    position: relative;
+    display: flex;
     padding-top: 2em;
-    background-color: rgba(220, 0, 12, 0.4);
   }
 
   .community-wrap>h2 {
+    position: absolute;
+    top: 0;
+    left:96px;
     padding: 50px 0;
     font-size: 80px;
     text-align: left;
@@ -398,22 +406,30 @@ transition: 0.5s;
 
   .community-container {
     height: auto;
+    width: 100%;
   }
 
   .community {
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     gap: 1.5em;
-    justify-content: flex-end;
-    height: 300px;
   }
-
+  .community2 {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+  }
+  
   .com-list {
     position: relative;
-    height: 100%;
-    max-width: 350px;
-    flex: 1;
+    height: 400px;
+    width: 49%;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
   }
-
+  
   .com-list:before {
     content: '';
     position: absolute;
@@ -421,62 +437,79 @@ transition: 0.5s;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff;
+    transition: 0.5s;
+    opacity: 1;
   }
+  
+  .brand:before {    
+    background-color: var(--point-color);
 
-  .com-title:hover dd {
-    display: block;
   }
-
+  .event:before {    
+    background-color: #bfbdbd;
+  }
+  .com-list:hover {
+    background-size: 105%;
+    transition: 0.5s;
+  }
+  .com-list:hover:before {
+    content: '';
+    opacity: 0;
+    transition: 0.5s;
+  }
   .com-btn {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    align-items: flex-start;
+    justify-content: flex-end;
     padding: 20px;
     text-align: center;
-    color: var(--primary-color);
-    text-shadow: none;
-  }
+    /* color: var(--primary-color); */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 
-  .com-btn:before {
-    position: relative;
-    display: block;
-    content: '\e98e';
-    font-family: var(--google-icon);
-    font-size: 50px;
-    font-weight: 200;
-    text-align: left;
-    z-index: 3;
   }
 
   .com-btn dt {
-    font-size: 1.5em;
+    font-size: 2.5em;
     font-weight: 700;
   }
 
   .com-btn dd {
-    display: none;
+    font-size: 1.3em;
+    /* display: none; */
     word-break: keep-all;
   }
 
   /* 서비스영역 */
-  .service-item a ul:before {
-    font-size: 5em;
-    height: inherit;
+  .service-list {
+
+flex-wrap: nowrap;
 
   }
 
-  .service-list {
+.service-item {
+  width: 25%;
+}
 
-  justify-content: space-between;
+
+  .service-item a ul:before {
+    /* font-size: 5em; */
 
   }
 
 }
+/* 5. pc 1600px부터~ */
+@media screen and (min-width: 1600px) {
+  
+
+}
+
 
 /* 5. laptop 1921~ */
-@media screen and (min-width: 1921px) {}
+@media screen and (min-width: 1921px) {
+
+}
 
 
 @keyframes product-page {
